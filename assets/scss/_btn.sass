@@ -1,0 +1,50 @@
+.btn
+    padding: 18px 65px
+    margin: 15px auto
+    +ft(15, 15, 500, $ffText)
+    text-align: center
+    justify-content: center
+    border-radius: 10px
+    background-color: $blue7
+    color: $dark
+    box-shadow: 0 2px 10px -5px lighten($dark, 50%)
+    &--bd
+        border: 1px solid $white
+        color: $white
+        background-color: transparent
+        &:hover
+            background-color: $blue7
+            color: $dark
+    &--top
+        background-color: $blue
+        border: none
+        +flex(flex, center, center, nowrap)
+        width: 40px
+        height: 40px
+        border-radius: 4px
+        position: fixed
+        right: 10px
+        bottom: 10px
+        svg
+            fill: $white
+
+
+.soc
+    .icon, .icon--hover
+        position: absolute
+    .icon--hover
+        opacity: 0
+    a
+        position: relative
+        display: inline-flex
+        +sz(35px, 35px)
+        margin: 15px
+        transition: $trs
+        &:hover
+            transform: scale(1.1)
+    +maw($sm)
+        margin-top: 20px
+        a
+            margin: 5px
+        svg
+            +sz(30px, 30px)

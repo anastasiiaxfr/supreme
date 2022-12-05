@@ -1,0 +1,61 @@
+<!-- Footer -->
+<!--Main Footer-->
+<footer class="footer" id="contacts">
+
+  <div class="container">
+    <div class="footer__top">
+      <div class="col-md-4">
+        <div class="d-flex justify-content-center justify-content-md-start align-items-end">
+          {{ .Scratch.Set "img" .Site.Params.logo }}
+          {{ .Scratch.Set "logo_w" 75 }}
+          {{ .Scratch.Set "logo_h" 104 }}
+          {{ .Scratch.Set "logo_mode" "dark" }}
+          {{- partial "_logo.html" . -}}
+  
+          <div class="d-sm-none">
+            <a href="#" class="btn btn--bd">Связаться</a>
+          </div>
+        </div>
+     
+      </div>
+    </div>
+    <div class="footer__middle">
+      <div class="row">
+        <div class="col-md-4">
+          <nav class="footer__nav">
+            <a href="#"> Terms & Conditions</a>
+            <a href="#"> Privacy Policy </a>
+            <a href="#"> Privacy of Token Sale</a>
+            <a href="#"> AML Policy</a>
+          </nav>
+        </div>
+        <div class="col-md-4">
+         <div class="d-none d-md-block">
+          <h4 class="mb-4">Контакты</h4>
+          <p>
+            <a href="mailto:contact@supremetruthcoin.com">contact@supremetruthcoin.com</a>
+          </p>
+          <a href="#" class="btn btn--bd">Связаться</a>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__btm">
+      <p class="d-none d-md-block">{{ .Site.Params.copyright | markdownify }}</p>
+      <nav class="soc">
+        {{ range .Site.Params.soc }}
+        <a href="{{.link}}" target="_blank" rel="noopener noreferrer" title="{{ .title }}">
+          <svg class="icon" width="45" height="45">
+            <use xlink:href="#{{.icon}}"></use>
+          </svg>
+        </a>
+        {{ end }}
+      </nav>
+    </div>
+
+
+
+  </div>
+  </div>
+</footer>
+<!--Main Footer-->

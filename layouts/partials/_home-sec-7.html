@@ -1,0 +1,56 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ if $data.homepage.section_7 }}
+{{ with $data.homepage.section_7 }}
+
+<section class="section section_7 my-lg-5 py-5" id="benefits">
+  <div class="container text-center">
+    <h2 class="mb-5">
+        Преимущества смарт-контрактов
+    </h2>
+    <div class="row">
+        <div class="col-lg-6">
+            <figure class="feature">
+                <span class="feature__num">
+                    1
+                </span>
+                <div class="feature__title">
+                    Экономия времени и ресурсов
+                </div>
+            </figure>
+        </div>
+        <div class="col-lg-6">
+            <figure class="feature">
+                <span class="feature__num">
+                   2
+                </span>
+                <div class="feature__title">
+                    Более низкие расходы, так как нет потребности в услугах посредников
+                </div>
+            </figure>
+        </div>
+        <div class="col-lg-6">
+            <figure class="feature">
+                <span class="feature__num">
+                   3
+                </span>
+                <div class="feature__title">
+                    Дополнительная безопасность от использования блокчейна
+                </div>
+            </figure>
+        </div>
+        <div class="col-lg-6">
+            <figure class="feature">
+                <span class="feature__num">
+                   4
+                </span>
+                <div class="feature__title">
+                    Более быстрая проверка условий выполнения контракта
+                </div>
+            </figure>
+        </div>
+    </div>
+  </div>
+</section>
+
+{{ end }} 
+{{ end }}

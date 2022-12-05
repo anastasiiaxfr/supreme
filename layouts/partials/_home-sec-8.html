@@ -1,0 +1,32 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ if $data.homepage.section_8 }}
+{{ with $data.homepage.section_8 }}
+
+<section class="section section_8 mb-5 pb-5">
+  <div class="container text-center">
+    <h2 class="mb-5">
+        Наши партнеры
+    </h2>
+
+    <div class="partners">
+        <a href="#">
+            <img src="/images/partner1.png" alt="ALT">
+        </a>
+        <a href="#">
+            <img src="/images/partner2.png" alt="ALT">
+        </a>
+        <a href="#">
+            <img src="/images/partner3.png" alt="ALT">
+        </a>
+        <a href="#">
+            <img src="/images/partner4.png" alt="ALT">
+        </a>
+        <a href="#">
+            <img src="/images/partner5.png" alt="ALT">
+        </a>
+    </div>
+  </div>
+</section>
+
+{{ end }} 
+{{ end }}

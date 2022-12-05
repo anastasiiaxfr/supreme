@@ -1,0 +1,11 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.hero }}
+{{ with $data.homepage.hero }}
+
+  <section class="section">
+
+  </section>
+
+{{ end }}
+{{ end }}

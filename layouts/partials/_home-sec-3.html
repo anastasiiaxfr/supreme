@@ -1,0 +1,20 @@
+{{ $data := index .Site.Data .Site.Language.Lang }} 
+{{ if $data.homepage.section_3 }} 
+{{ with $data.homepage.section_3 }}
+
+<section class="section section_3 py-5 my-5" id="security">
+    <div class="container py-5">
+       <div class="row align-items-center">
+        <div class="col-lg-6 p-lg-5 order-1">
+            Заемщики и инвесторы заключают договор на основе Смарт-контракта без привлечения банков, юристов, иных посредников, а также необходимости проведения переговоров, посещения офисов и проверки надежности контрагента. Эти функции берет на себя наша цифровая платформа.
+        </div>
+        <div class="col-lg-6 p-lg-5 order-12">
+            <h2>
+                Безопасно ли это?
+            </h2>
+        </div>
+       </div>
+    </div>
+</section>
+
+{{ end }} {{ end }}

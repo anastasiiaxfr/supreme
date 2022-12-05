@@ -1,0 +1,174 @@
+body
+    +theme(white)
+
+.bg
+    background-repeat: no-repeat
+    background-position: 100% 0
+    background-size: cover
+    color: $white
+    padding-top: 25px
+    padding-bottom: 100px
+
+.img
+    max-width: 100%
+
+.section
+    &_1
+        color: $white
+        +maw($sm)
+            text-align: center
+
+    &_3
+        background-color: rgba($blue, 80%) 
+        background-image: linear-gradient(-90deg, darken($blue, 10%) 50%, lighten($blue, 10%) 50%)
+        color: $white
+        +maw($lg)
+            background-image: none
+            text-align: center
+   
+    &_6
+        background-color: rgba($blue, 80%) 
+        background-image: linear-gradient(90deg, darken($blue, 10%) 50%, lighten($blue, 10%) 50%)
+        color: $white
+        +maw($lg)
+            background-image: none
+            text-align: center
+   
+
+
+
+.partners
+    +flex(flex, center, center, wrap)
+    margin-top: 50px
+    a
+        display: block
+        margin: 10px 4%
+        max-width: 395px
+    img
+        display: block
+        max-width: 100%
+
+
+.feature
+    +flex(flex, center, flex-start, nowrap)
+    &__num
+        color: $blue6
+        +ft(249, 249, 700)
+    &__title
+        +ft(36, 36, 500)
+        text-align: left
+        transform: translateX(-50px)
+    +maw($sm)
+        &__title
+            +ft(17, 17, 500)
+            transform: translateX(-25px)
+        &__num
+            +ft(122, 122, 700)
+
+
+.card
+    +theme(blue)
+    border-radius: 8px
+    border: none
+    +flex(flex, center, center, nowrap)
+    flex-direction: row
+    align-self: stretch
+    height: 100%
+    &__icon
+        width: 100px
+        img
+            width: 80px
+            height: 80px
+            object-fit: contain
+    &__content
+        width: calc(100% - 80px)
+        padding: 28px 28px 28px 0
+    &__title
+        +ft(18, 18, 700)
+        margin-bottom: 10px
+    &__text
+        +ft(18, 18*1.4, 400)
+
+.table-price
+    width: 100%
+    margin-top: 20px
+    margin-bottom: 20px
+    +theme(blue)
+    border-radius: 10px
+    
+    +maw($lg)
+        th, td
+            display: block
+           
+        .cell1
+            text-align: center
+            order: 12
+            width: 100%
+        .cell2
+            display: block
+            width: 100%
+            order: 1
+            padding-top: 10px
+        .row1
+            display: flex
+            flex-wrap: wrap
+
+        
+    .btn
+        background-color: rgba($white, 0.5)
+        color: $white
+        padding: 8px 40px
+        width: 200px
+        &:hover
+            background-color: $white
+            color: $dark
+
+    th
+        position: relative
+        padding: 20px
+        +ft(35, 35, 700)
+        width: 300px
+        overflow: hidden
+        &::after
+            content: ''
+            width: 300px
+            height: 300px
+            position: absolute
+            display: block
+            left: 0
+            top: 0
+            background: #ffffff45
+            border-top-right-radius: 50%
+            border-bottom-right-radius: 50%
+            bottom: 0
+            margin: auto
+        +maw($lg)
+            text-align: center
+            width: 100%
+            padding: 30px 0 50px
+            &::after
+                border-radius: 50%
+                height: 300px
+                width: 150%
+                top: -150px
+                left: -25%
+                right: 0
+                margin: auto
+        big
+            +ft(73, 73, 700)
+            letter-spacing: -2%
+    &__inner
+        width: 90%
+        margin: 30px auto
+
+        & > tbody > tr
+            &:last-child
+                border-top: 1px solid $white
+            &:first-child
+                td
+                    +ft(16, 16, 500)
+                    padding-bottom: 10px
+                
+        td
+            +ft(16, 16*1.2, 400)
+           

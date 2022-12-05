@@ -1,0 +1,61 @@
+.lang-switcher
+    button
+        background: transparent
+        border: none
+        color: inherit
+        margin: 0
+        text-transform: uppercase
+        +ft(12, 12, 700)
+        &:hover, &:focus, &:active
+            background-color: transparent
+            box-shadow: none
+    .dropdown-menu
+        min-width: auto
+        left: 0
+        right: 0
+        margin: auto
+        +theme(black)
+        li
+            button
+                color: inherit
+
+.footer
+    padding: 100px 0 50px
+    background: $blue_light url('../images/bg1.png') no-repeat 50%/100% 100%
+    color: $white
+    .logo
+        margin-bottom: 30px
+    &__btm
+        +flex(flex, center, space-between, wrap)
+    &__nav
+        a
+            display: block
+            color: inherit
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+    +maw($sm)
+        &__btm 
+            justify-content: center
+        &__nav
+            display: none
+        .logo
+            margin-bottom: 0px
+
+.logo
+    display: block
+
+.nav
+    &-link
+        color: inherit
+        &:hover
+            color: inherit
+            text-shadow: 0 0 0
+    &-item
+        padding-left: 10px
+        padding-right: 10px
+       
+
+.navbar-toggler
+    &:focus
+        box-shadow: none
