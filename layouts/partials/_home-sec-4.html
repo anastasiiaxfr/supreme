@@ -25,12 +25,12 @@
                         </td>
                     </tr>
                     <tr>
-                    <td>
-                        от
-                    </td>
-                    <td>
-                        без ограничений
-                    </td>
+                        <td>
+                            от
+                        </td>
+                        <td>
+                            без ограничений
+                        </td>
                     </tr>
                 </table>
 
@@ -47,12 +47,12 @@
                         </td>
                     </tr>
                     <tr>
-                    <td>
-                        1
-                    </td>
-                    <td>
-                        36
-                    </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            36
+                        </td>
                     </tr>
                 </table>
 
@@ -73,8 +73,6 @@
                 </div>
             </div>
         </div>
-
-
 
         <div class="row">
             <div class="col-sm-6 col-lg-12">
@@ -500,61 +498,61 @@
 </section>
 
 <script>
-    window.onload = function(){
-    var $ = function ( selector ) {
-    return document.querySelector( selector );  
-  };
-  var update = function() {
-    var mnts = $range_year.value;
-    var dep_base = $range_dep.value;
+    window.onload = function () {
+        var $ = function (selector) {
+            return document.querySelector(selector);
+        };
+        var update = function () {
+            var mnts = $range_year.value;
+            var dep_base = $range_dep.value;
 
-    $year.innerHTML = mnts + ' мес';
-    $dep.innerHTML = dep_base + ' $';
-    
-    var percent;
-    
-    if(mnts <= 3){
-      percent = 4.3
-    } else if(mnts<=6){
-      percent = 4.6
-    } else if (mnts <= 12){
-      percent = 5
-    } else if (mnts<=24){
-      percent = 5.4
-    } else if (mnts <=36){
-      percent = 5.54
-    } else {
-      percent = 5
-    }
+            $year.innerHTML = mnts + ' мес';
+            $dep.innerHTML = dep_base + ' $';
 
-    $interest.innerHTML = percent + '%';
+            var percent;
+
+            if (mnts <= 3) {
+                percent = 4.3
+            } else if (mnts <= 6) {
+                percent = 4.6
+            } else if (mnts <= 12) {
+                percent = 5
+            } else if (mnts <= 24) {
+                percent = 5.4
+            } else if (mnts <= 36) {
+                percent = 5.54
+            } else {
+                percent = 5
+            }
+
+            $interest.innerHTML = percent + '%';
 
 
-    var discount = (dep_base * (percent / 100)).toFixed(2);
-    
-    $total.innerHTML = discount + '$';
-  
-  };
-  
-  
-  var $range_year = $('.calculator-range-year');
-  var $year = $('.calculator-year');
-  var $range_dep = $('.calculator-range-dep');
-  var $dep = $('.calculator-dep');
-  var $total = $('.calculator-total');
-  var $interest = $('.calculator-percent')
-  
+            var discount = (dep_base * (percent / 100)).toFixed(2);
 
-  
-  update();
-  $range_year.addEventListener('input', update);
-  $range_year.addEventListener('change', update);
-  $range_dep.addEventListener('input', update);
-  $range_dep.addEventListener('change', update);
-  
-  
-};
+            $total.innerHTML = discount + '$';
+
+        };
+
+
+        var $range_year = $('.calculator-range-year');
+        var $year = $('.calculator-year');
+        var $range_dep = $('.calculator-range-dep');
+        var $dep = $('.calculator-dep');
+        var $total = $('.calculator-total');
+        var $interest = $('.calculator-percent')
+
+
+
+        update();
+        $range_year.addEventListener('input', update);
+        $range_year.addEventListener('change', update);
+        $range_dep.addEventListener('input', update);
+        $range_dep.addEventListener('change', update);
+
+
+    };
 </script>
 
-{{ end }} 
+{{ end }}
 {{ end }}

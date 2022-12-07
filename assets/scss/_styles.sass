@@ -79,8 +79,10 @@ body
     &__icon
         width: 100px
         img
+            display: block
             width: 80px
             height: 80px
+            margin: 0 auto
             object-fit: contain
     &__content
         width: calc(100% - 80px)
@@ -176,12 +178,14 @@ body
                 border-top: 1px solid $white
             &:first-child
                 td
-                    +ft(16, 16, 300)
+                    +ft(20, 20, 300)
                     padding-bottom: 10px
-                    padding-top: 10px
                 
+        th
+            +ft(14, 14, 700)
+            padding-bottom: 10px
         td
-            +ft(16, 16*1.2, 400)
+            +ft(12, 12*1.2, 400)
            
 
 .calculator
